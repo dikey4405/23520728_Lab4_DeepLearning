@@ -4,7 +4,7 @@ from torch.utils.data import Dataset
 from torch.nn.utils.rnn import pad_sequence
 from typing import List, Dict
 
-from dataset_construct.vocab import Vocabulary 
+from vocab import Vocabulary 
 
 class TranslationDataset(Dataset):
     def __init__(self, json_path: str, vocab: Vocabulary):
@@ -51,3 +51,4 @@ def translation_collate_fn(batch: List[Dict]) -> Dict[str, torch.Tensor]:
         "src_len": src_lens,
         "tgt_len": tgt_lens
     }
+
