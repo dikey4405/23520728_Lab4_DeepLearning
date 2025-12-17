@@ -1,0 +1,20 @@
+data:
+  train: "dataset/small-train.json"
+  dev:   "dataset/small-dev.json"
+  test:  "dataset/small-test.json"
+  src_lang: "english"
+  tgt_lang: "vietnamese"
+
+model:
+  name: "seq2seqbahdanau"  # Model bài 2
+  hidden_dim: 256
+  num_layers: 3
+  dropout: 0.5
+
+train:
+  batch_size: 32
+  lr: 0.001
+  weight_decay: 0.00001
+  epochs: 30
+  patience: 5
+  save_path: "checkpoints/bai2.pt"
